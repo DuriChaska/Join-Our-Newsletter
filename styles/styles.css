@@ -38,6 +38,12 @@ body {
 .description{
     font-size: 12px;
 }
+.description-desktop {
+    display: block;
+}
+.description-mobile {
+    display: none;
+}
 
 .card {
     box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.03), 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
@@ -87,6 +93,12 @@ input[type="email"] {
     color: rgb(107, 114, 128);
 }
 
+.email-spam-desktop {
+    display: block;
+}
+.email-spam-mobile {
+    display: none;
+}
 
 .author-info {
     font-size: 14px;
@@ -99,3 +111,27 @@ input[type="email"] {
     text-decoration: none;
 }
 
+@media screen and (max-width: 480px) {
+   .description-desktop {
+        display: none;
+    }
+    .description-mobile {
+        display: block;
+        font-size: 12px;
+        color: rgb(107, 114, 128);
+        margin-bottom: 40px;
+    }
+    body{
+        padding: 20px;
+        height: auto;
+    }
+    .logo{
+        margin-top: 100px;
+    }
+    .email-spam-desktop {
+        display: none;
+    }
+    .email-spam-mobile {
+        display: block;
+    }
+}
